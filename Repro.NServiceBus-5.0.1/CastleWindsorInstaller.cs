@@ -9,7 +9,7 @@ namespace Repro.NServiceBus_5._0._1
 		public void Install(IWindsorContainer container, IConfigurationStore store)
 		{
 			container.Register(
-				Classes.FromAssemblyNamed("Repro.Shared")
+				Classes.FromAssemblyInThisApplication()
 				.Pick()
 				.WithServiceDefaultInterfaces()
 				.LifestyleTransient());
